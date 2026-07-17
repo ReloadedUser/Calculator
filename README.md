@@ -1,8 +1,9 @@
 ## Calculator
+
 A simple calculator made in C. 
 ------------------------------
 
-#Available operations:
+# Available operations:
 
 -addition ("+") 
 -substraction ("-") 
