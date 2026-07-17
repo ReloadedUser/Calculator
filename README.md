@@ -11,7 +11,7 @@
 -division ("/") 
 -exponentiation ("^") 
 
-In development :
+### In development :
 -radical ("√") 
 
 
