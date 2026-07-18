@@ -10,9 +10,11 @@
 -multiplication ("*") 
 -division ("/") 
 -exponentiation ("^") 
+-radical ("v")>>>>> Please note:the first number is the index, and the second is the radicant
 
-### In development :
--radical ("√") 
+
+
+
 
 
 
