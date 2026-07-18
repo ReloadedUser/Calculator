@@ -22,13 +22,16 @@ void calc(const char sign[1],long int firstNumber,long int secondNumber) {
         case '^':
             result=pow((double)firstNumber,(double)secondNumber);
             break;
+        case 'v':
+            result = pow(firstNumber, 1.0 / secondNumber);
+            break;
+
         default:
             printf("Error:please enter a valid operation sign.\n");
             exit(1);
-
-
     }
-    printf("The result is: %ld\n",result);
+    printf("The result is: %ld\n", result);
+
 
 }
 
@@ -58,4 +61,6 @@ int main(void) {
             check=1;
         }
     }
-    calc(sign,firstNumber,secondNumber);    }
+    calc(sign,firstNumber,secondNumber);
+    return 0;
+    }
