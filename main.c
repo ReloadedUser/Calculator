@@ -4,8 +4,8 @@
 
 
 
-void calc(const char sign[1],long int firstNumber,long int secondNumber) {
-    long int result;
+long long int calc(const char sign[1],long long int firstNumber,long long int secondNumber) {
+    long long int result;
     switch (*sign) {
         case '+':
             result=firstNumber+secondNumber;
@@ -20,7 +20,7 @@ void calc(const char sign[1],long int firstNumber,long int secondNumber) {
             result=firstNumber*secondNumber;
             break;
         case '^':
-            result=pow((double)firstNumber,(double)secondNumber);
+            result=pow(firstNumber,secondNumber);
             break;
         case 'v':
             result = pow(firstNumber, 1.0 / secondNumber);
@@ -28,9 +28,10 @@ void calc(const char sign[1],long int firstNumber,long int secondNumber) {
 
         default:
             printf("Error:please enter a valid operation sign.\n");
-            exit(1);
+            return 0;
     }
-    printf("The result is: %ld\n", result);
+    return result;
+
 
 
 }
@@ -39,8 +40,8 @@ void calc(const char sign[1],long int firstNumber,long int secondNumber) {
 int main(void) {
 
     char sign[1];
-    long int firstNumber;
-    long int secondNumber;
+    long long int firstNumber;
+    long long int secondNumber;
     int check=0;
 
 
@@ -48,11 +49,11 @@ int main(void) {
     scanf("%s",sign);
 
     printf("Enter the first operation number:\n");
-    scanf("%ld",&firstNumber);
+    scanf("%lld",&firstNumber);
 
     while (check == 0) {
         printf("Enter the second operation number:\n");
-        scanf("%ld",&secondNumber);
+        scanf("%lld",&secondNumber);
 
         if (sign[0]=='/' && secondNumber==0){
             check=0;
@@ -61,6 +62,6 @@ int main(void) {
             check=1;
         }
     }
-    calc(sign,firstNumber,secondNumber);
+        printf("The result is: %lld\n", calc(sign,firstNumber,secondNumber));
     return 0;
-    }
+}
